@@ -9,11 +9,11 @@ const Button = () => {
   
   const content = [
     { name: "Guidebook", desc: "Buku panduan untuk KSR PMI IPB 2024/25", link: "https://www.instagram.com" },
-    { name: "GFORM Oprec Pimpinan", desc: "Link untuk daftar Oprec Pimpinan", link: "https://docs.google.com/forms" },
-    { name: "GFORM Oprec Staff", desc: "Link untuk daftar Oprec Staff", link: "https://docs.google.com/forms" },
+    { name: "GFORM Oprec Pimpinan", desc: "Link untuk daftar Oprec Pimpinan", link: "https://gforms.app/r/ku8wwTE" },
+    { name: "GFORM Oprec Staff", desc: "Link untuk daftar Oprec Staff", link: "https://gforms.app/r/ku8wwTE" },
     {
       name: "Contact Us On Instagram!",
-      desc: "Bingung? Hubungi kami di Instagram", link: "https://www.instagram.com/ksr_pmi_ipb",
+      desc: "Ada pertanyaan? Hubungi kami di Instagram", link: "https://www.instagram.com/ksr_pmi_ipb",
     },
     { name: "Email Us!", desc: "Hubungi kami di Email kami!!", link: "mailto:ksrpmiipb@gmail.com" },
   ];

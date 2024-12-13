@@ -1,5 +1,5 @@
-import React from 'react';
-import { Share, X } from 'lucide-react';
+import React from "react";
+import { Share, X } from "lucide-react";
 
 const Modal = ({ selectedData, isOpen, onClose }) => {
   const handleShare = async () => {
@@ -15,25 +15,33 @@ const Modal = ({ selectedData, isOpen, onClose }) => {
     }
   };
 
+  const formattedLink = selectedData?.link?.startsWith("mailto:")
+    ? selectedData.link.replace("mailto:", "")
+    : selectedData?.link || "Link URL";
+
   if (!isOpen) return null; // Jangan render modal jika tidak aktif
 
   return (
-    <div className="bg-black bg-opacity-75 fixed top-0 left-0 w-screen h-screen flex items-end z-20">
-      <div className="bg-white relative flex flex-col justify-center p-6 items-center w-full h-2/3 bottom-0 rounded-t-2xl gap-y-4">
-        <X className="absolute top-5 right-5 cursor-pointer" onClick={onClose} />
-        <div className="w-full border-2 border-red-500 h-48 rounded-xl flex items-center justify-center">
-          <p className="text-gray-500"></p>
+    <div className="bg-black bg-opacity-75 fixed top-0 left-0 w-screen h-screen flex items-end md:items-center justify-center z-20">
+      <div className="bg-white relative flex flex-col justify-between px-8 py-10 items-center w-full md:w-1/3 md:min-w-96 h-2/3 md:h-3/4 bottom-0 rounded-t-2xl md:rounded-2xl gap-y-4 animate-slide-up md:animate-none">
+        <X
+          className="absolute top-4 right-5 cursor-pointer"
+          onClick={onClose}
+        />
+        <h1 className="text-lg font-semibold">Share Link</h1>
+        <div className="w-full bg-white border-2 hover:scale-[1.02] transition-all ease-out duration-300 drop-shadow-lg hover:drop-shadow-2xl h-48 rounded-xl flex items-center justify-center">
+          <a
+            href={selectedData?.link}
+            className="flex flex-col justify-center items-center text-black line-clamp-1 w-full h-full"
+          >
+            <h1 className="text-2xl font-semibold">{selectedData?.name}</h1>
+            <p className="text-sm">{formattedLink}</p>
+          </a>
         </div>
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="text-xl font-semibold">{selectedData?.name || "Title"}</h1>
-          <p className="text-sm text-gray-500">
-            {selectedData?.desc || "Deskripsi"}
-          </p>
-        </div>
-        <div className="w-full">
+        <div className="w-full flex justify-center">
           <button
             onClick={handleShare}
-            className="flex flex-row relative justify-center items-center bg-[#3F4A74] px-4 text-white h-14 w-full rounded-lg"
+            className="flex flex-row relative justify-center items-center hover:scale-[1.02] transition-all ease-in-out duration-500 bg-[#3F4A74] px-4 text-white h-14 w-full md:max-w-[320px] rounded-lg"
           >
             <p>Share</p>
             <Share className="absolute right-5" />

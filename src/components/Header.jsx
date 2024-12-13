@@ -3,6 +3,9 @@ import React from "react";
 const Header = () => {
   const iconIpb = "/img/logo_ipb.png";
   const iconPmi = "/img/logo_pmi.png";
+  const handleContext = (event) => {
+    event.preventDefault();
+  };
   return (
     <>
       {/* <div className="flex flex-col justify-center items-center gap-y-4 py-12">
@@ -16,13 +19,15 @@ const Header = () => {
           </p>
         </div>
       </div> */}
-      <div className="flex flex-col justify-center items-center text-[#3F4A74] py-12">
+      <div className="flex flex-col justify-center items-center text-[#3F4A74] py-12 gap-y-4">
         <div className="flex flex-row justify-center items-center">
           <div className="border-r-2 sm:border-r-4 border-black p-4">
             <div className="flex flex-row gap-x-4">
               <div className="w-12 h-12 sm:w-24 sm:h-24 flex-shrink-0 bg-white rounded-full flex justify-center items-center">
                 <img
                   src={iconPmi}
+                  draggable="false"
+                  onContextMenu={handleContext}
                   className="w-10 h-10 sm:w-20 sm:h-20"
                   alt="Logo PMI"
                   srcset=""
@@ -30,6 +35,8 @@ const Header = () => {
               </div>
               <img
                 src={iconIpb}
+                draggable="false"
+                onContextMenu={handleContext}
                 className="w-12 h-12 sm:w-24 sm:h-24"
                 alt="Logo IPB"
                 srcset=""
