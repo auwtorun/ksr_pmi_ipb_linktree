@@ -10,7 +10,7 @@ const Button = () => {
 
   const content = [
     { name: "Guidebook", desc: "Buku panduan untuk KSR PMI IPB 2024/25", link: "https://www.instagram.com" },
-    { name: "GFORM Oprec Pimpinan", desc: "Link untuk daftar Oprec Pimpinan", link: "https://gforms.app/r/ku8wwTE" },
+    { name: "GFORM Oprec Pimpinan", desc: "Link untuk daftar Oprec Pimpinan", link: "https://docs.google.com/forms/d/1M3sU52gRy9T75Nsy7VwiAJ5_YpPGY53gqUKM3IR2by4/edit?usp=drivesdk" },
     { name: "GFORM Oprec Staff", desc: "Link untuk daftar Oprec Staff", link: "https://gforms.app/r/ku8wwTE" },
     {
       name: "Contact Us On Instagram!",
@@ -37,7 +37,7 @@ const Button = () => {
         {content.map((item, index) => (
           <button
             key={index}
-            className="bg-[#3F4A74] relative hover:scale-[1.02] transition-all ease-in-out duration-500 w-full max-w-[480px] flex justify-center items-center rounded-full py-4 text-white"
+            className="bg-[#3F4A74] font-moreSugar font-normal  relative hover:scale-[1.02] transition-all ease-in-out duration-500 w-full max-w-[480px] flex justify-center items-center rounded-full py-4 text-white"
           >
             <a className="h-full w-full" href={item.link} target="_blank" rel="noopener noreferrer">
               {item.name}

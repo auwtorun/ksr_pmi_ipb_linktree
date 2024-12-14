@@ -30,7 +30,7 @@ const Header = () => {
           {/* Button untuk membuka modal berbagi website */}
           <div
             onClick={() => handleOpenModal("website")}
-            className="absolute rounded-full bg-black bg-opacity-30 hover:bg-opacity-20 transition-all ease-in-out duration-400 w-10 h-10 flex justify-center items-center top-5 right-5 cursor-pointer"
+            className="absolute rounded-full bg-black bg-opacity-30 hover:bg-opacity-20 transition-all ease-in-out duration-400 w-10 h-10 flex justify-center items-center top-4 right-2 cursor-pointer"
           >
             <FontAwesomeIcon icon={faEllipsis} style={{ color: "#ffffff" }} />
           </div>

@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "MoreSugar";
+  src: url("../public/font/MoreSugar-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MoreSugar";
+  src: url("../public/font/MoreSugar-Thin.ttf") format("truetype");
+  font-weight: 200; /* Thin */
+  font-style: normal;
+}
+
 :root {
-    background-color: #FFEBD3;
+  background-color: #ffebd3;
 }

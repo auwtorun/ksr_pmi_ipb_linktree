@@ -59,7 +59,7 @@ const Modal = ({ isOpen, type, selectedData, onClose }) => {
 
   return (
     <div className="bg-black bg-opacity-75 fixed top-0 left-0 w-screen h-screen flex items-end md:items-center justify-center z-20">
-      <div className="bg-white relative flex flex-col justify-between px-8 py-10 items-center w-full md:w-1/3 md:min-w-96 h-2/3 md:h-3/4 bottom-0 rounded-t-2xl md:rounded-2xl gap-y-4 animate-slide-up md:animate-none">
+      <div className="bg-white relative flex flex-col justify-around md:justify-between px-8 py-10 items-center w-full md:w-1/3 md:min-w-96 h-3/4 bottom-0 rounded-t-2xl md:rounded-2xl gap-y-4 animate-slide-up md:animate-none">
         <X className="absolute top-4 right-5 cursor-pointer" onClick={onClose} />
         <h1 className="text-lg font-semibold">
           {type === "content" ? "Share Content" : "Share Website"}
@@ -74,7 +74,7 @@ const Modal = ({ isOpen, type, selectedData, onClose }) => {
             >
               <h1 className="text-2xl font-semibold">{selectedData?.name}</h1>
               {/* Tampilkan link tanpa "mailto:" */}
-              <p className="text-sm">{displayLink || "No link available"}</p>
+              <p className="text-sm line-clamp-1 w-full px-12">{displayLink || "No link available"}</p>
             </a>
           ) : (
             <a

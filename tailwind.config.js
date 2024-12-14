@@ -12,6 +12,9 @@ export default {
       animation: {
         'slide-up': 'slide-up 0.2s ease-in',
       },
+      fontFamily: {
+        moreSugar: ['MoreSugar', 'sans-serif'],
+      },
     },
   },
   plugins: [],
