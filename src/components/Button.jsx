@@ -5,8 +5,9 @@ import Modal from "./Modal";
 
 const Button = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalType, setModalType] = useState(null);
   const [selectedData, setSelectedData] = useState(null);
-  
+
   const content = [
     { name: "Guidebook", desc: "Buku panduan untuk KSR PMI IPB 2024/25", link: "https://www.instagram.com" },
     { name: "GFORM Oprec Pimpinan", desc: "Link untuk daftar Oprec Pimpinan", link: "https://gforms.app/r/ku8wwTE" },
@@ -18,13 +19,15 @@ const Button = () => {
     { name: "Email Us!", desc: "Hubungi kami di Email kami!!", link: "mailto:ksrpmiipb@gmail.com" },
   ];
 
-  const handleModalToggle = (data) => {
+  const handleOpenModal = (data) => {
     setSelectedData(data);
+    setModalType("content");
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+    setModalType(null);
     setSelectedData(null);
   };
 
@@ -40,7 +43,7 @@ const Button = () => {
               {item.name}
             </a>
             <span
-              onClick={() => handleModalToggle(item)}
+              onClick={() => handleOpenModal(item)}
               className="absolute right-5 cursor-pointer z-10 w-6 h-6 flex justify-center items-center"
             >
               <FontAwesomeIcon
@@ -51,6 +54,7 @@ const Button = () => {
           </button>
         ))}
         <Modal
+          type={modalType}
           selectedData={selectedData}
           isOpen={isModalOpen}
           onClose={handleCloseModal}
