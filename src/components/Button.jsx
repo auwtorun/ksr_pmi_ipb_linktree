@@ -9,7 +9,7 @@ const Button = () => {
   const [selectedData, setSelectedData] = useState(null);
 
   const content = [
-    { name: "Guidebook", desc: "Buku panduan untuk KSR PMI IPB 2024/25", link: "https://www.instagram.com" },
+    { name: "Guidebook", desc: "Buku panduan untuk KSR PMI IPB 2024/25", link: "https://ipb.link/guidebook-oprec-pimpinan-staff-ksr" },
     { name: "GFORM Oprec Pimpinan", desc: "Link untuk daftar Oprec Pimpinan", link: "https://docs.google.com/forms/d/1M3sU52gRy9T75Nsy7VwiAJ5_YpPGY53gqUKM3IR2by4/edit?usp=drivesdk" },
     { name: "GFORM Oprec Staff", desc: "Link untuk daftar Oprec Staff", link: "https://gforms.app/r/ku8wwTE" },
     {
